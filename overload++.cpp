@@ -39,8 +39,9 @@ class number {
 
 };
 
-void operator<<(ostream& out, number a){ //ostream mus be a refrence(&)
+ostream operator<<(ostream& out, number a){ //ostream mus be a refrence(&)
     out << a.get_numn();
+    return out;
 }
 
 int main(){
@@ -56,7 +57,7 @@ int main(){
         //a++; // a--
         ++a; // --a
 
-        cout << a;
+        cout << a <<endl;
 
         a++;
         a.print();
