@@ -20,6 +20,11 @@ class number {
         cout << num << endl;
     }
 
+    number& operator++(){
+
+    }
+
+
 
 };
 
@@ -32,6 +37,14 @@ int main(){
         number b = (4);
 
         (a + b).print();
+
+        //a++; // a--
+        //++a; // --a
+
+        int x = 4;
+
+        cout << x++ << endl;
+        cout << ++x << endl;
 
     return 0;
 }
