@@ -49,7 +49,7 @@ int main(){
         //a++; // a--
         ++a; // --a
 
-        a.print();
+        cout << a;
 
         a++;
         a.print();
