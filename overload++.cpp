@@ -6,7 +6,9 @@ class number {
     int num;
 
     public:
-    
+    number(){
+        num = 0;
+    }
 
     number (int x){
         num = x;
@@ -18,6 +20,9 @@ class number {
 
     int get_numn(){
         return num;
+    }
+    void set_num(int x){
+        num = x;
     }
     void print(){
         cout << num << endl;
@@ -44,6 +49,14 @@ ostream& operator<<(ostream& out, number a){ //ostream mus be a refrence(&)
     return out;
 };
 
+istream& operator>>(istream& in, number& a){ // cin needs a refrence fo rnumb
+    int x;
+    in >> x;
+    a.set_num(x);
+
+    return in;
+}
+
 int main(){
 
     /*a.f(b);the same
@@ -61,6 +74,12 @@ int main(){
 
         a++;
         cout << a << endl;
+
+
+        number c;
+        cin >> c;
+
+        cout << c <<endl;
     /* DONT DO THIS
     ANY ASSIGNENT SHOULD BE ITS OWN LINE OF CODE
         int x = 4;
