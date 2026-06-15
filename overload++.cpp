@@ -39,10 +39,10 @@ class number {
 
 };
 
-ostream operator<<(ostream& out, number a){ //ostream mus be a refrence(&)
+ostream& operator<<(ostream& out, number a){ //ostream mus be a refrence(&)
     out << a.get_numn();
     return out;
-}
+};
 
 int main(){
 
@@ -52,7 +52,7 @@ int main(){
         number a = (2);
         number b = (4);
 
-        (a + b).print();
+        cout <<a + b<< endl;
 
         //a++; // a--
         ++a; // --a
@@ -60,7 +60,7 @@ int main(){
         cout << a <<endl;
 
         a++;
-        a.print();
+        cout << a << endl;
     /* DONT DO THIS
     ANY ASSIGNENT SHOULD BE ITS OWN LINE OF CODE
         int x = 4;
